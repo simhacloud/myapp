@@ -2,7 +2,9 @@ node {
   stage('SCM Checkout'){
   git 'https://github.com/simhacloud/myapp'
   }
-  stage ('Compile-Package'){
-  sh 'clean-verify'
-  }
+   stage('Mvn Package'){
+	   // Build using maven
+	   
+	   sh "${mvn} clean package deploy"
+}
   }
