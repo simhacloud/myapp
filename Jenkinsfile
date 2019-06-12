@@ -3,6 +3,6 @@ node {
   git 'https://github.com/simhacloud/myapp'
   }
   stage ('Compile-Package'){
-  sh 'mvn-package'
+  sh 'clean-verify'
   }
   }
